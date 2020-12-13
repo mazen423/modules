@@ -15,7 +15,7 @@ data "azurerm_subscription" "current" {
 resource "azurerm_resource_group" "main" {
   name = var.rgname
   location = var.location
-
+}
 resource "azurerm_storage_account" "baseline_storage" {
   name = var.saname
   resource_group_name       = azurerm_resource_group.main.name
